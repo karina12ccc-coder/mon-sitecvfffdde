@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Windows - Présentation</title>
+    <link rel="stylesheet" href="page1.css">
+</head>
+
+<body>
+
+    <!-- Menu de navigation -->
+    <div class="menu">
+        <div class="ma-div"><a href="page1.html">Accueil</a></div>
+        <div class="ma-div"><a href="page2.html">Versions</a></div>
+        <div class="ma-div"><a href="page3.html">Avantages</a></div>
+
+
+
+    </div>
+    <div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Rechercher...">
+            <button onclick="searchText()">Rechercher</button>
+        </div>
+        <script>
+            function searchText() {
+                const input = document.getElementById("searchInput").value;
+                if (!input) return;
+
+                // enlever anciens surlignages
+                document.body.innerHTML = document.body.innerHTML.replace(/<mark>|<\/mark>/g, "");
+
+                const regex = new RegExp(input, "gi");
+                document.body.innerHTML = document.body.innerHTML.replace(regex, match => `<mark>${match}</mark>`);
+            }
+        </script>
+    </div>
+
+    <main>
+
+        <div class="bloc">
+
+            <div class="ma-div">
+                <h1 id="haut">Découvrir Windows</h1>
+            </div>
+
+            <div class="ma-div">
+                <p>
+                    - Windows est un <strong>système d'exploitation</strong> développé par Microsoft.
+                    Il permet d'utiliser un ordinateur, de lancer des logiciels et de gérer les fichiers.
+                </p>
+            </div>
+
+            <div class="ma-div">
+                <h2>Sommaire</h2>
+                <ul>
+                    <li><a href="https://fr.wikipedia.org/wiki/Microsoft_Windows" target="_blank"> Définition.</a></li>
+                    <li><a href="https://fr.wikipedia.org/wiki/Microsoft_Windows" target="_blank"> Rôles.</a></li>
+                    <li><a href="https://www.bing.com/search?q=images%20windows" target="_blank"> Images.</a></li>
+                </ul>
+            </div>
+
+            <div class="ma-div">
+                <h2 id="definition">Qu'est-ce que Windows ?</h2>
+                <p>
+                    Windows est un logiciel qui sert d’interface entre l’utilisateur et le matériel.
+                </p>
+                <p>
+                    <strong>Source :</strong>
+                    <a href="https://fr.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Wikipedia</a>
+                </p>
+            </div>
+
+            <div class="ma-div">
+                <h2 id="roles">Rôles de Windows</h2>
+                <ul>
+                    <li>Gérer la mémoire</li>
+                    <li>Lancer des programmes</li>
+                    <li>Afficher l’interface graphique</li>
+                    <li>Gérer les fichiers</li>
+                </ul>
+            </div>
+
+            <div class="ma-div">
+                <h2 id="images">Image cliquable</h2>
+                <a href="page2.html">
+                    <img src="img/windows1.JPG" width="300" alt="Windows">
+                </a>
+            </div>
+
+            <div class="ma-div">
+                <a href="page1.html" class="btn">Retour en haut</a>
+            </div>
+            <textarea placeholder="Écris ton message ici..."></textarea>
+
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
