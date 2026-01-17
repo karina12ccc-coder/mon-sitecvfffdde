@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Windows - Avantages</title>
+    <link rel="stylesheet" href="page3.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="ma-div"><a href="page1.html">Accueil</a></div>
+        <div class="ma-div"><a href="page2.html">Versions</a></div>
+        <div class="ma-div"><a href="page3.html">Avantages</a></div>
+
+
+
+    </div>
+    <div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Rechercher...">
+            <button onclick="searchText()">Rechercher</button>
+        </div>
+        <script>
+            function searchText() {
+                const input = document.getElementById("searchInput").value;
+                if (!input) return;
+
+                // enlever anciens surlignages
+                document.body.innerHTML = document.body.innerHTML.replace(/<mark>|<\/mark>/g, "");
+
+                const regex = new RegExp(input, "gi");
+                document.body.innerHTML = document.body.innerHTML.replace(regex, match => `<mark>${match}</mark>`);
+            }
+        </script>
+    </div>
+
+    <main>
+        <div class="bloc">
+
+            <div class="ma-div">
+                <h1>Avantages de Windows</h1>
+
+                <p>
+                    Windows est très utilisé dans le monde entier pour de nombreuses raisons.
+                </p>
+            </div>
+
+            <div class="ma-div">
+                <h2>Principaux avantages</h2>
+                <ul>
+                    <li>Interface graphique simple et intuitive</li>
+                    <li>Compatibilité avec beaucoup de logiciels</li>
+                    <li>Mises à jour régulières</li>
+                    <li>Soutien matériel étendu (imprimantes, périphériques)</li>
+                </ul>
+            </div>
+
+            <div class="ma-div">
+                <h2>Quelques fonctionnalités clés</h2>
+                <ol>
+                    <li>Bureau et menus personnalisables</li>
+                    <li>Explorateur de fichiers efficace</li>
+                    <li>Multitâche avec gestion de fenêtres</li>
+                    <li>Sécurité avec antivirus intégré et mises à jour</li>
+                </ol>
+            </div>
+
+            <div class="ma-div">
+                <img src="img/windows3.jpg" width="300" alt="Windows Avantages">
+            </div>
+
+            <div class="ma-div">
+                <button>
+                    <a href="page3.html">Retour en haut</a>
+                </button>
+
+            </div>
+    </main>
+
+</body>
+
+</html>

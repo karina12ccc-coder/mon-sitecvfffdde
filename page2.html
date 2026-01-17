@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Windows - Versions</title>
+    <link rel="stylesheet" href="page2.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="ma-div"><a href="page1.html">Accueil</a></div>
+        <div class="ma-div"><a href="page2.html">Versions</a></div>
+        <div class="ma-div"><a href="page3.html">Avantages</a></div>
+
+
+
+    </div>
+    <div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Rechercher...">
+            <button onclick="searchText()">Rechercher</button>
+        </div>
+        <script>
+            function searchText() {
+                const input = document.getElementById("searchInput").value;
+                if (!input) return;
+
+                // enlever anciens surlignages
+                document.body.innerHTML = document.body.innerHTML.replace(/<mark>|<\/mark>/g, "");
+
+                const regex = new RegExp(input, "gi");
+                document.body.innerHTML = document.body.innerHTML.replace(regex, match => `<mark>${match}</mark>`);
+            }
+        </script>
+    </div>
+    <main>
+
+        <div class="bloc">
+
+            <div class="ma-div">
+                <h1>Les versions de Windows</h1>
+
+                <p>Microsoft a développé plusieurs versions de Windows.</p>
+            </div>
+
+
+
+            <div class="ma-div">
+                <ol>
+                    <li>Windows XP</li>
+                    <li>Windows 7</li>
+                    <li>Windows 10</li>
+                    <li>Windows 11</li>
+                </ol>
+            </div>
+
+            <div class="ma-div">
+                <h2>Tableau comparatif</h2>
+
+                <table border="1">
+                    <tr>
+                        <th>Version</th>
+                        <th>Année</th>
+                        <th>Interface</th>
+                    </tr>
+                    <tr>
+                        <td>XP</td>
+                        <td>2001</td>
+                        <td>Simple</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>2009</td>
+                        <td>Moderne</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>2021</td>
+                        <td>Fluide</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="ma-div">
+                <p>
+                    Source :
+                    <a href="https://www.microsoft.com/fr-fr/windows" target="_blank">
+                        Microsoft
+                    </a>
+                </p>
+            </div>
+            <div class="ma-div"><img src="img/windows2.jpg" width="300"><br><br>
+            </div>
+            <div class="ma-div"><button>
+                    <a href="page2.html">Retour en haut</a>
+                </button></div>
+
+
+
+
+    </main>
+
+</body>
+
+</html>
